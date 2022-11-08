@@ -1,0 +1,13 @@
+body{
+    background-image: url(img/tile.jpg);
+}
+#form{
+    height: 250px;
+    margin-top: 20px;
+    width: 600px;
+    background-image: url(img/formbg.jpg);
+    background-clip:content-box ;
+}
+h1{
+    text-align: center;
+}
