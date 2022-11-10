@@ -16,9 +16,12 @@ body{
     height: 300px;
     background-image: url(img/formbg.jpg);
     border-radius: 50px;
+    border-style: dashed;
 }
 
 h1{
+    margin: 15px;
+    font-size: 54px;
     text-align: center;
     font-family: 'header_font';
 }
