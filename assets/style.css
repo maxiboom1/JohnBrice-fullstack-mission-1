@@ -164,3 +164,13 @@ hr{
     left: 36px;
     font-size: medium;
   }
+
+  .card_list{
+    position: absolute;
+    width: 290px;
+    top: 100px;
+    left: 36px;
+    height: 200px;
+    list-style: none;
+    overflow: auto;
+  }
