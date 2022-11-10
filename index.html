@@ -15,25 +15,56 @@
     <div class="container" id="form">
 
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="form_div col-sm-6">
+            <div class="col-sm-2"></div>
+            <div class="form_div col-sm-8">
             <form autocomplete="off">
                 
-                <input type="text" id="task_header" placeholder="Enter task name" name="task_header">
-                <input type="date" id="date" name="date">
-                <input type="time" id="time" name="time">
-                <br><br>
-                <textarea id="task_description" placeholder="Enter task description here..." name="task_description" rows="3" cols="30"></textarea><br>
+                <div class="form_header_div">
+                    <label for="task_header">&#10149;</label>
+                    <input type="text" id="task_header" placeholder="Enter task name" name="task_header">
+                    <label for="date1">&#128128;</label>
+                    <input type="date" id="date" name="date">
+                    <input type="time" id="time" name="time">
+                </div> 
+                <br>
+                <label for="task_1">&#8618;</label>
+                <input type="text" id="task_1" placeholder="Submission-1" name="task_1"><br>
+                <label for="task_2">&#8618;</label>
+                <input type="text" id="task_2" placeholder="Submission-2" name="task_2"><br>
+                <label for="task_3">&#8618;</label>
+                <input type="text" id="task_3" placeholder="Submission-3" name="task_3"><br>
                 <input class="myButton" type="submit" value="Create task">
                 <button class="myButton">Clear</button>
                 </form>
+                
 
         </div>
 
-        <div class="col-sm-3"></div>
+        <div class="col-sm-2"></div>
 
         </div>
-    
+        <br>
+        <hr/>
+        <br><br>
+        
+        <!------------------------ Notes ------------------------>
+        
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="card">
+                    
+                    <img src="assets/img/notebg.png" alt="" height="420" width="400">
+                    <h3 class="card_header">Task header</h3>
+                    <h4 class="card_task1">Submission-1 task text Lorem ipsum, dolor sit amet.</h4>
+                    <h4 class="card_task2">Submission-1 task text</h4>
+                    <h4 class="card_task3">Submission-1 task text</h4>
+                    <h5 class="card_date">10:22 18-08-2022</h5>
+
+                </div>
+            </div>
+
+          </div>
     </div>
 
 
