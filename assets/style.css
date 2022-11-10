@@ -3,11 +3,32 @@ body{
 }
 #form{
     height: 250px;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 600px;
     background-image: url(img/formbg.jpg);
     background-clip:content-box ;
+    position: relative;
+
 }
 h1{
     text-align: center;
+}
+
+input[type="text"] 
+{
+    
+    background: transparent;
+    border: none;
+}
+
+input:focus{
+    outline: none !important;  
+}
+
+label[for="task_header"]{
+    margin-top: 24px;
+}
+
+label[for="task_description"]{
+    margin-top: 15px;
 }
