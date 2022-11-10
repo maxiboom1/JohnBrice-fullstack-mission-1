@@ -15,48 +15,29 @@
     <div class="container" id="form">
 
         <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8">
-                <form>
-                    <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="task_head" placeholder="asd" name="task_head">
-                        <label for="task_head">Task Head</label>
-                    </div>
-                    
-                    <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="task_description" placeholder="asd" name="task_description">
-                        <label for="task_description">Task description</label>
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-text">Deadline &#128369;</span>
-                        <input type="date" class="form-control" id="deadline_date" placeholder="asd"name="deadline_date">                    
-                        <input type="time" class="form-control" id="deadline_date" placeholder="asd"name="deadline_date">                    
-
-                    </div>
-                   
-                   
-            </div>
-            <br>
-            <button type="submit" class="btn">Submit</button>
-
-            </form>
-            <!-- <form>
-                <label for="task_header">Task:</label><br>
-                <input type="text" id="task_header" name="task_header"><br>
-                <label for="task_description">Description:</label>
-                <input type="text" id="task_description" name="task_description"><br><br>
-                <input type="submit" value="Submit">
-              </form> -->
+            <div class="col-sm-3"></div>
+            <div class="form_div col-sm-6">
+            <form>
+                
+                <input type="text" id="task_header" placeholder="Enter task name" name="task_header">
+                <input type="date" id="date" name="date">
+                <input type="time" id="time" name="time">
+                <br><br>
+                <textarea id="task_description" placeholder="Enter task description here..." name="task_description" rows="3" cols="30"></textarea><br>
+                <input class="myButton" type="submit" value="Create task">
+                <button class="myButton">Clear</button>
+                </form>
 
         </div>
 
-        <div class="col-sm-2"></div>
+        <div class="col-sm-3"></div>
 
+        </div>
+    
     </div>
 
 
-
-    </div>
+   
     <script src="assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
