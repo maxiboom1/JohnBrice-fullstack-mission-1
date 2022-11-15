@@ -95,7 +95,7 @@ hr{
     color: rgb(0, 0, 0); 
     height: 3px; 
     background-color:black; 
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 
@@ -130,32 +130,21 @@ hr{
 	top:1px;
 }
 
+/* -------------- task card -------------- */
+
+
 .card{
  background: none;
+ font-size: 26px;
+ 
 }
+
 
 .card_header {
     position: absolute;
-    top: 45px;
-    left: 106px;
-  }
-
-  .card_task1 {
-    position: absolute;
-    top: 100px;
-    left: 36px;
-  }
-
-  .card_task2 {
-    position: absolute;
-    top: 140px;
-    left: 36px;
-  }
-
-  .card_task3 {
-    position: absolute;
-    top: 180px;
-    left: 36px;
+    top: 50px;
+    left: -27px;
+    width: 387px;
   }
 
   .card_date {
@@ -168,9 +157,39 @@ hr{
   .card_list{
     position: absolute;
     width: 290px;
-    top: 100px;
-    left: 36px;
+    top: 120px;
+    left: 30px;
     height: 200px;
     list-style: none;
     overflow: auto;
   }
+
+  /* -------------- task card: hover + svg icon -------------- */
+
+  SVG{
+    display:none;
+    position: absolute;
+    top: 37px;
+    left: 320px;
+  }
+
+  .card:hover svg{
+    display:block
+  }
+
+  .card h1{
+    font-size: 34px;
+    text-align: center;
+    font-family: 'header_font';
+  }
+
+
+.fade_in{
+  animation-name: zoom;
+  animation-duration: 1s;
+}  
+
+@keyframes zoom {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
