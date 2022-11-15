@@ -1,17 +1,17 @@
+// Page init
 document.querySelector("form").addEventListener('submit', handleSubmit);
-document.querySelector(".btn_clear").addEventListener('click', clear);
+let task_list = localStorage.length > 0 ? JSON.parse(localStorage.getItem('task_list')) : [];
+render('no_animation');
 
+// Funcs
 
-let task_list = localStorage.length > 0 ? JSON.parse(localStorage.getItem('task_list')) : []; // ternary operator - very nice thing with condition on daclaration.
-
-render();
 function handleSubmit(event){
     event.preventDefault();
     const task = getFormData(event.target);
-    //event.target.reset();
     tasklistUpdate(task);
     updateLocalStorage();
     render();
+    event.target.reset();
 }
 
 function getFormData(data){
@@ -23,40 +23,31 @@ function getFormData(data){
     return task;
 }
 
-function tasklistUpdate(task = undefined){
+function tasklistUpdate(task){
     
-    let i =0;
-    for(;i<task_list.length;i++){
+    task_list.unshift(task);
+
+    for(let i = 0;i<task_list.length;i++){
         task_list[i].id = i; // set id to each task obj  
     }
-    // on new task event only (wont run on remove task)
-    if(task){
-        task.id = i;
-        task_list.unshift(task);
-    }
-
 }
 
 function updateLocalStorage(){
     localStorage.setItem('task_list',JSON.stringify(task_list))
 }
 
-function render(){
+function render(action){
     document.querySelector('.root').innerHTML = "";
 
     for(let i = 0; i<task_list.length; i++){ 
         const node = document.createElement("div");
         node.classList.add("col-sm-4");
-        
-        if(i == 0) {node.classList.add("fade_in");
-            node.innerHTML = innerHTMLcreator(task_list[i]);
-            document.querySelector('.root').appendChild(node);
-        } else {
-            setTimeout(()=>{
-                node.innerHTML = innerHTMLcreator(task_list[i]);
-                document.querySelector('.root').appendChild(node);
-            },800)
+        if(i == 0 && action != 'no_animation'){
+            node.classList.add("fade_in");
         }
+        node.innerHTML = innerHTMLcreator(task_list[i]);
+        document.querySelector('.root').appendChild(node);
+        
     }   
 
 }
@@ -81,22 +72,9 @@ function innerHTMLcreator(task){
     return content;
 }
 
-function clear(){
-    localStorage.clear();
-    task_list.length = 0;
-    render()
-}
-
 function removeTask(el){
-    const index = el.getAttribute("id")
-    task_list.splice(index,1);
-    
-    tasklistUpdate();
+    const index = el.getAttribute("id"); 
+    task_list = task_list.filter((task) => { return task.id != index});
     updateLocalStorage();
-    render();
-
-}
-
-function setSubmissionStatus(el){
-    console.log(el)
+    render('no_animation');
 }

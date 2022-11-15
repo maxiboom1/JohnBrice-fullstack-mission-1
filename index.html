@@ -11,17 +11,21 @@
 </head>
 
 <body>
+    
     <h1>My Tasks</h1>
+    
     <div class="container" id="form">
-
+        
         <div class="row">
+            
             <div class="col-sm-2"></div>
+            
             <div class="form_div col-sm-8">
             <form autocomplete="off">
                 
                 <div class="form_header_div">
                     <label for="task_header">&#10149;</label>
-                    <input type="text" id="task_header" placeholder="Enter task name" name="task_header" required>
+                    <input type="text" id="task_header" placeholder="Enter task name" name="task_header" maxlength="22" required>
                     <label for="date1">&#128128;</label>
                     <input type="date" id="date" name="date" required>
                     <input type="time" id="time" name="time" required>
@@ -34,29 +38,25 @@
                 <label for="task_3">&#8618;</label>
                 <input type="text" id="task_3" placeholder="Submission-3" name="task_3"><br>
                 <input class="myButton" type="submit" value="Create task">
-                <button type="button" class="myButton btn_clear">Clear</button>
-                </form>
-                
+                <button type="reset" class="myButton btn_clear">Clear</button>
+            </form>
+            </div>
+
+            <div class="col-sm-2"></div>
 
         </div>
 
-        <div class="col-sm-2"></div>
-
-        </div>
         <br>
-        <hr/>
-        <br><br>
+        <br>
         
-        <!------------------------ Notes ------------------------>
-        
+        <!-- Task cards  -->
         <div class="row root"></div>
     
     </div>
 
-
-   
     <script src="assets/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
