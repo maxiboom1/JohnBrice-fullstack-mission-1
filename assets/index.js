@@ -1,9 +1,19 @@
 // Page init
 document.querySelector("form").addEventListener('submit', handleSubmit);
-let task_list = localStorage.length > 0 ? JSON.parse(localStorage.getItem('task_list')) : [];
+let task_list = setInitList();
 render('no_animation');
 
 // Funcs
+
+function setInitList(){    
+    
+    const ls = JSON.parse(localStorage.getItem('task_list'));  
+    if(ls == null || ls.length == 0){
+        return [];
+    }   
+    return ls;
+    
+}
 
 function handleSubmit(event){
     event.preventDefault();
